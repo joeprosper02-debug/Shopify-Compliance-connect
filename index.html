@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compliance Connect</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif;}
+body{background:#ffffff;color:#333;line-height:1.6;}
+
+/* PRELOADER */
+#preloader{
+    position:fixed;
+    top:0;left:0;width:100%;height:100%;
+    background:#0d47a1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    color:white;
+    z-index:9999;
+    font-size:24px;
+}
+
+/* HEADER */
+header{
+    background:#0d47a1;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+header h1{
+    font-size:2.5rem;
+}
+header p{
+    font-size:1.2rem;
+}
+
+/* SECTIONS */
+section{
+    padding:60px 20px;
+    max-width:1000px;
+    margin:auto;
+}
+section h2{
+    color:#0d47a1;
+    margin-bottom:20px;
+    font-size:2rem;
+}
+
+/* SERVICES */
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+.service-box{
+    background:#f5f5f5;
+    padding:20px;
+    border-radius:8px;
+    text-align:center;
+    transition:transform 0.3s;
+}
+.service-box:hover{
+    transform:translateY(-5px);
+}
+
+/* TESTIMONIALS */
+.testimonials{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+.testimonial{
+    background:#f5f5f5;
+    padding:20px;
+    border-radius:8px;
+    text-align:center;
+}
+.testimonial img{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    margin-bottom:10px;
+}
+
+/* CONTACT */
+.contact{
+    text-align:center;
+}
+.contact a{
+    display:inline-block;
+    margin:10px;
+    font-size:1.2rem;
+    text-decoration:none;
+    color:#0d47a1;
+}
+.contact a i{
+    margin-right:8px;
+}
+
+/* FOOTER */
+footer{
+    background:#0d47a1;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+</style>
+</head>
+<body>
+
+<!-- PRELOADER -->
+<div id="preloader">
+    <div id="loader-text">Loading 0%</div>
+</div>
+
+<!-- HEADER -->
+<header>
+    <h1>Compliance Connect</h1>
+    <p>Your Partner in Online Business Compliance & Security</p>
+</header>
+
+<!-- ABOUT -->
+<section>
+    <h2>About Us</h2>
+    <p>At Compliance Connect, we help online merchants maintain the highest security and compliance standards. Our team specializes in identifying and fixing vulnerabilities before they affect your business. We combine deep industry knowledge with cutting-edge solutions to keep your store safe and operational.</p>
+</section>
+
+<!-- SERVICES -->
+<section>
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="service-box">
+            <i class="fas fa-shield-alt fa-2x" style="color:#0d47a1;"></i>
+            <h3>Security Audits</h3>
+            <p>We run comprehensive audits to detect and resolve vulnerabilities.</p>
+        </div>
+        <div class="service-box">
+            <i class="fas fa-file-contract fa-2x" style="color:#0d47a1;"></i>
+            <h3>Compliance Checks</h3>
+            <p>Ensure your store meets industry standards and regulations.</p>
+        </div>
+        <div class="service-box">
+            <i class="fas fa-tools fa-2x" style="color:#0d47a1;"></i>
+            <h3>Technical Fixes</h3>
+            <p>From missing security headers to code errors, we fix it all.</p>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section>
+    <h2>What Our Clients Say</h2>
+    <div class="testimonials">
+        <div class="testimonial">
+            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Client">
+            <p>"Compliance Connect saved our store from a major security breach. Their professionalism is unmatched!"</p>
+            <strong>- Michael Thompson, Store Owner</strong>
+        </div>
+        <div class="testimonial">
+            <img src="https://randomuser.me/api/portraits/women/60.jpg" alt="Client">
+            <p>"The audit report was detailed and easy to understand. We fixed all issues in no time."</p>
+            <strong>- Sarah Johnson, E-commerce Manager</strong>
+        </div>
+        <div class="testimonial">
+            <img src="https://randomuser.me/api/portraits/men/12.jpg" alt="Client">
+            <p>"Highly recommend! Fast response and excellent communication throughout."</p>
+            <strong>- David Lee, Entrepreneur</strong>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+    <h2>Contact Us</h2>
+    <a href="https://wa.link/yrlthx" target="_blank"><i class="fab fa-whatsapp"></i>WhatsApp</a>
+    <a href="https://t.me/+2349168820117" target="_blank"><i class="fab fa-telegram"></i>Telegram</a>
+    <a href="mailto:leoburnettdigital02@gmail.com"><i class="fas fa-envelope"></i>EMAIL</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    &copy; 2025 Compliance Connect. All Rights Reserved.
+</footer>
+
+<!-- SCRIPT FOR PRELOADER -->
+<script>
+let loaderText = document.getElementById('loader-text');
+let progress = 0;
+let interval = setInterval(() => {
+    progress++;
+    loaderText.textContent = 'Loading ' + progress + '%';
+    if(progress >= 100){
+        clearInterval(interval);
+        document.getElementById('preloader').style.display = 'none';
+    }
+}, 20);
+</script>
+
+</body>
+</html>
